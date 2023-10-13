@@ -6,6 +6,8 @@ initDatabase();
 const express = require("express");
 const app = express();
 
+app.use(express.json());
+
 const userRouter = require("./routers/user");
 const taskRouter = require("./routers/task");
 const authRouter = require("./routers/auth");
