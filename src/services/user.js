@@ -8,10 +8,14 @@ exports.save = async function (data) {
 	return user;
 };
 
-exports.findOneByEmail = async function (email) {
+exports.findOneByEmail = function (email) {
 	return User.findOne({
 		where: {
 			email,
 		},
 	});
+};
+
+exports.findById = function (id) {
+	return User.findByPk(id);
 };
