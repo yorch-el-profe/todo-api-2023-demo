@@ -21,3 +21,5 @@ passport.use(
 		}
 	)
 );
+
+module.exports = passport.authenticate("jwt", { session: false });
